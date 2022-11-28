@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn2.iconfinder.com/data/icons/ios7-inspired-mac-icon-set/512/Calculator_512.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Calculator in 12 lines</h1>
+    <div id="show"></div>
+  </body>
+</html>
+<script>
+  let show = document.getElementById("show");
+  for (let i = 0; i <= 15; i++) {
+    let btn = document.createElement("button");
+    i <= 9
+      ? (btn.innerHTML = i)
+      : i == 10
+      ? (btn.innerHTML = ".")
+      : i == 11
+      ? (btn.innerHTML = "+")
+      : i == 12
+      ? (btn.innerHTML = "-")
+      : i == 13
+      ? (btn.innerHTML = "*")
+      : i == 14
+      ? (btn.innerHTML = "/")
+      : (btn.innerHTML = "=");
+    show.append(btn);
+    btn.addEventListener("click", () => oprator(btn));
+  }
+  function oprator(item) {
+    item.innerHTML != "="
+      ? show.append(item.innerHTML)
+      : show.append(
+          "=" +
+            eval(
+              document.getElementsByTagName("div")[0].childNodes[16].wholeText
+            )
+        );
+  }
+</script>
+<!-- // item.innerHTML!="="?p2.append(item.innerHTML):p2.append("="+eval(document.getElementsByTagName("p")[0].innerHTML));
+// show.append(p2);
+// show.append(item.innerHTML)
+// console.log(document.getElementsByTagName("div")[0].childNodes[16].wholeText) -->
