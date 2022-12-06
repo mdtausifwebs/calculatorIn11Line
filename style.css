@@ -2,21 +2,18 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: black;
 }
 body {
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 5rem;
 }
-h1 {
-  color: rgb(68, 115, 224);
-  background-color: linear-gradient(to top, #33ccff 0%, #ff99cc 100%);
-}
+
 div {
-    border-radius: 1rem;
+  border-radius: 1rem;
   width: 50%;
   border: 1px solid black;
   display: flex;
@@ -27,10 +24,60 @@ div {
   background: linear-gradient(to top, #33ccff 0%, #ff99cc 100%);
 }
 button {
-    border: none;
+  border: none;
   margin: 0.1rem;
   width: 24%;
   padding: 1.5rem;
   font-size: 2rem;
   background: linear-gradient(to top, #33ccff 0%, #ff99cc 100%);
+}
+#show {
+  padding: 2rem;
+}
+#show h1 {
+  font-size: 3.5rem;
+  align-items: center;
+}
+@media only screen and (max-width: 400px) {
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .5rem solid;
+  }
+  div {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  button {
+    padding: 1rem;
+    width: 10%;
+    border: 1px solid black;
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .5rem solid;
+  }
+  div {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  button {
+    padding: 1rem;
+    width: 24%;
+    border: 1px solid black;
+    font-size: 1rem;
+  }
 }
